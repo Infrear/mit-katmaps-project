@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> KatMaps </title>
+        <link rel="stylesheet" type="text/css" href="input.css" />
+        <link rel="stylesheet" type="text/css" href="currency.css" />
+        <link rel="stylesheet" type="text/css" href="results.css" />
+
+...
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="topbar">
+            <div class="topbar-content">
+                <a href="main.html" class="topbar-link">Home</a>
+                <a href="about.html" class="topbar-link">About</a>
+                <a href="services.html" class="topbar-link">Services</a>
+                <a href="contact.html" class="topbar-link">Contact</a>
+            </div>
+             <meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <title>Menu Linking</title>
+             <link rel="stylesheet" href="input.css">
+            
+        </div>
+        <div class="body-content">
+            <div class="logo-container">
+                <img src="../resources/testing.webp" id="cat-image" height="250"></img>
+            </div>
+            <h1 class="title">KatMaps</h1>
+            <div class="location-container">
+                <input type="text" id="start" placeholder="Enter your starting address">
+                <input type="text" id="end" placeholder="Enter your destination">
+            </div>
+            <div>
+                <h3 class="results"> Your Kool Kat Travel Routes! </h3>
+                <div id="results-container" class="hidden"></div>
+            </div>
+            <div class="divider-content">
+                <h2> ✦ . 　⁺ 　 . ✦ . 　⁺ 　 . ✦ </h2>
+            </div>
+            <div class="white-box">
+                <div class="metric">
+                    <h4 class="metric-input"> What are your travel priorities?</h4><br>
+                        <input type="checkbox" id="sustainability" name="sustainability" value="metric">
+                        <label for="sustainability"> 🌱 Eco-Friendly </label><br>
+                         <input type="checkbox" id="cost" name="cost-efficiency" value="metric">
+                         <label for="cost"> 🤑 Cost Efficiency </label><br>
+                         <input type="checkbox" id="time" name="time" value="metric">
+                        <label for="sustainability"> 🏃🏻 Time Efficiency </label><br>
+                         <input type="checkbox" id="McDonalds" name="McDonalds" value="metric">
+                         <label for="McDonalds"> 🍟 McDonalds En Route </label><br>
+                </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+    
+    <!-- Currency Converter Box -->
+<div class="currency-box">
+    <h3>Currency Converter</h3>
+    <label>Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount" />
+
+    <label>From:</label>
+    <select id="from-currency"></select>
+
+    <label>To:</label>
+    <select id="to-currency"></select>
+
+    <button id="convert-btn">Convert</button>
+
+    <p id="conversion-result"></p>
+</div>
+
+<script src="results.js"></script>
+<script src="currency.js"></script>
+
+</html>
