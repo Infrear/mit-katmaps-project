@@ -1,0 +1,246 @@
+/* setting the webpage font to Raleway - jenn */
+* {
+    font-family: "Raleway", serif;
+}
+
+/* ---- TOPBAR STYLING ---- */
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(229, 41, 116, 0.9); /* Dark semi-transparent */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.topbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.topbar-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff647;
+}
+
+.topbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* ---CAT LOGO STYLING--- */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 10px;
+    width: 100%;
+    animation: scaleInOut 1.5s ease-in-out;
+}
+
+/* ---BACKGROUND OF WEBPAGE--- */
+body {
+    font-family: "Raleway", sans-serif;
+    background-image: linear-gradient(rgb(250, 239, 241), rgb(252, 206, 232));
+    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200vh;
+    font-family: "Raleway", sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding-top: 10px; /* Prevent content from hiding behind the fixed navbar */
+}
+
+.body-content {
+    padding-top: 0%; /* Adjust this if the topbar height changes */
+    text-align: center;
+}
+
+
+/* ---TITLE STYLING--- */
+.title {
+    font-size: 30px;
+    letter-spacing: 3px;
+    align-items: center;
+    color: rgb(132, 17, 84);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---- BODY CONTENT STYLING ---- */
+.body-content {
+    margin-top: 0px;
+}
+
+.logo-container img {
+    width: 250px;
+    height: auto;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #333;
+    margin: 15px 0;
+}
+
+/* ---- LOCATION INPUT BOXES ---- */
+input[type="text"] {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: none;
+    text-align: center;
+    font-weight:bold;
+    box-shadow: 10px 10px 5px rgb(136, 81, 98);
+    margin-bottom: 20px;
+}
+
+input[type="text"]:focus {
+    border-color: #ff6b6b;
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
+}
+
+.location-container {
+    text-align: center;
+    margin-top: 0px;
+}
+
+/* --- CAT BUTTON STYLING --- */
+.cat-button {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background: url('still-cat.webp') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+    left: -30%;  /* Start at the center */
+    transform: translateX(-50%);
+    margin: 20px auto; /* Places it below the text boxes */
+}
+
+
+/* Running animation */
+.cat-running {
+    background: url('resources/pixel-cat-running.gif') no-repeat center center !important;
+    background-size: contain !important;
+    animation: runCat 2s linear forwards;
+}
+
+/* Keyframes for the running cat */
+@keyframes runCat {
+    from { left: -30%; transform: translateX(-50%); }
+    to { left: -30%; transform: translateX(300%); }
+}
+
+/* --- PROGRESS BAR POSITIONING --- */
+.progress-container {
+    width: 60%;
+    height: 10px;
+    background: #ddd;
+    border-radius: 5px;
+    margin: 10px auto; /* Keeps it below the cat button */
+    display: none;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #ff6b6b;
+    transition: width 0.5s ease-in-out;
+}
+
+/* --- DIVIDER BTW INPUT AND RANKINGS --- */
+.divider-content {
+    color: rgb(157, 6, 74);
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+/* ---METRIC CONTAINER: WHITE BOX---*/
+.white-box {
+    width: 250px;
+    height: 200px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* --- METRIC CHECK BOXES --- */
+.metric {
+    padding-top: 20px;
+    text-align: left;
+    line-height: 1.2;
+    padding-left: 2%;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* ---- ANIMATIONS ---- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleInOut {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.7);
+    }
+}
+
+/* fade in straight down anim - obi */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
