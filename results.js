@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Example routes
     let paths = [
-        { distance: 10, efficiency: 90, cost: 5, emissions: 0.1, mcdonalds: 1, weather: "" },
-        { distance: 25, efficiency: 75, cost: 10, emissions: 0.3, mcdonalds: 2, weather: "" },
-        { distance: 50, efficiency: 60, cost: 20, emissions: 0.7, mcdonalds: 3, weather: "" },
+        { distance: 10, efficiency: 90, cost: 5, emissions: 0.1, mcdonalds: 1, weather: "Rain" },
+        { distance: 25, efficiency: 75, cost: 10, emissions: 0.3, mcdonalds: 2, weather: "Sunny" },
+        { distance: 50, efficiency: 60, cost: 20, emissions: 0.7, mcdonalds: 3, weather: "Snowy" },
     ];
 
     // Get Weather Data
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
         const weatherCondition = await fetchWeather();
         paths.forEach(path => {
-            path.weather = getWeatherIcon(weatherCondition);
+            path.weather = getWeatherIcon(path.weather);
         });
     } catch (error) {
         console.error("Error fetching weather:", error);

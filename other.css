@@ -79,6 +79,7 @@ body {
 
 /* Reset default margin/padding */
 * {
+    align-items: center;
     margin: 150px;
     padding: 0;
     box-sizing: border-box;
