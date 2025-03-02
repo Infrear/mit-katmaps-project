@@ -68,6 +68,7 @@ body {
 
 /* ---TITLE STYLING--- */
 .title {
+    font-weight:bold;
     font-size: 30px;
     letter-spacing: 3px;
     font-weight: bold;
@@ -78,7 +79,7 @@ body {
 
 /* Reset default margin/padding */
 * {
-    margin: 0;
+    margin: 150px;
     padding: 0;
     box-sizing: border-box;
 }
