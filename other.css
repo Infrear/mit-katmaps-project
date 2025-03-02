@@ -1,0 +1,89 @@
+/* setting the webpage font to Raleway - jenn */
+* {
+    font-family: "Raleway", serif;
+}
+
+/* ---- TOPBAR STYLING ---- */
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(229, 41, 116, 0.9); /* Dark semi-transparent */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.topbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.topbar-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: #fff647;
+}
+
+.topbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+/* ---BACKGROUND OF WEBPAGE--- */
+body {
+    margin: 150px;
+    font-family: "Raleway", sans-serif;
+    background-image: linear-gradient(rgb(250, 239, 241), rgb(252, 206, 232));
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    font-family: "Raleway", sans-serif;
+    background-color: #f4f4f4;
+    text-align: left;
+    padding-top: 0px; /* Prevent content from hiding behind the fixed navbar */
+}
+
+.body-content {
+    padding-top: 0%; /* Adjust this if the topbar height changes */
+    text-align: center;
+}
+
+
+/* ---TITLE STYLING--- */
+.title {
+    font-size: 30px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    align-items: center;
+    color: rgb(132, 17, 84);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Reset default margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---- BODY CONTENT STYLING ---- */
+.body-content {
+    margin-top: 0px;
+}

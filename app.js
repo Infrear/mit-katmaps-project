@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultText = document.createElement("p");
     const progressContainer = document.createElement("div");
     const progressBar = document.createElement("div");
+    
+    const resultsContainer = document.getElementById("results-container");
+
+    // Make sure the results container is hidden initially
+    if (resultsContainer) {
+        resultsContainer.classList.add("hidden");
+    }
 
     catButton.classList.add("cat-button");
     resultText.id = "result-text";
@@ -60,11 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(data => {
             resultText.textContent = `Route: ${data.route}`;
             resultText.style.color = "green";
+            resultsContainer.classList.remove("hidden");
         })
         .catch(error => {
             console.error("Error:", error);
             resultText.textContent = "Error fetching route.";
             resultText.style.color = "red";
+            resultsContainer.classList.remove("hidden");
         })
         .finally(() => {
             setTimeout(() => {

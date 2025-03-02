@@ -2,19 +2,14 @@ document.addEventListener("DOMContentLoaded", async function () {
     const resultsContainer = document.getElementById("results-container");
     const loadingBar = document.getElementById("loading-bar");
 
-    // Make sure the results container is hidden initially
-    if (resultsContainer) {
-        resultsContainer.classList.add("hidden");
-    }
-
     const houseIcon = 'resources/house.webp';
     const catIcon = 'resources/still-cat.webp';
 
     // Example routes
     let paths = [
-        { distance: 10, efficiency: 90, cost: 5, emissions: 0.1, mcdonalds: 1, weather: "" },
-        { distance: 25, efficiency: 75, cost: 10, emissions: 0.3, mcdonalds: 2, weather: "" },
-        { distance: 50, efficiency: 60, cost: 20, emissions: 0.7, mcdonalds: 3, weather: "" },
+        { distance: 10, efficiency: 90, cost: 5, emissions: 0.1, mcdonalds: 1, weather: "Rain" },
+        { distance: 25, efficiency: 75, cost: 10, emissions: 0.3, mcdonalds: 2, weather: "Sunny" },
+        { distance: 50, efficiency: 60, cost: 20, emissions: 0.7, mcdonalds: 3, weather: "Snow" },
     ];
 
     // Get Weather Data
@@ -22,7 +17,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         try {
             const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Boston&appid=YOUR_API_KEY");
             const data = await response.json();
-            const condition = data.weather[0].main;
+            const condition = data.weather[0].index;
             return condition;
         } catch (error) {
             console.error("Weather API Error:", error);
@@ -41,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Wait for weather data before rendering
     try {
-        const weatherCondition = await fetchWeather();
+        const weatherCondition = path.weather//await fetchWeather();
         paths.forEach(path => {
             path.weather = getWeatherIcon(weatherCondition);
         });
@@ -127,9 +122,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                     <p>🍔 McDonald's: ${path.mcdonalds}</p>
                 </div>
                 <div class="rbar-container" style="display: flex; align-items: center; gap: 5px;">
-                    <img src="house.webp" style="height: 20px; width: auto;">
+                    <img src="house.webp" style="height: 50px; width: auto;">
                     <div class="rba-bar" style="width: ${scaledWidth}%; height: 10px; background-color: #4CAF50;"></div>
-                    <img src="still-cat.webp" style="height: 20px; width: auto;">
+                    <img src="still-cat.webp" style="height: 50px; width: auto;">
                 </div>
                 <span class="weather-icon">${path.weather || "☀️"}</span>
             `;
